@@ -1,4 +1,5 @@
 import { MapPin, Phone, Instagram } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer({ dict }: { dict: any }) {
   return (
@@ -6,13 +7,33 @@ export default function Footer({ dict }: { dict: any }) {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-elfadh-red mb-4">EL-FADH Bimbel</h3>
-            <p className="text-gray-300 mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-12 h-12 bg-white rounded-md p-1">
+                <Image 
+                  src="/logo/elfadh-logo.jpg" 
+                  alt="EL-FADH Logo" 
+                  fill
+                  className="object-contain rounded-sm"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-elfadh-red">EL-FADH Bimbel</h3>
+            </div>
+            <p className="text-gray-300 mb-6">
               {dict.tagline}
             </p>
-            <p className="text-sm text-gray-400 italic">
-              {dict.under}
-            </p>
+            <div className="flex items-center gap-3 bg-gray-800 p-3 rounded-lg border border-gray-700">
+               <div className="relative w-10 h-10 shrink-0 bg-white rounded-full p-0.5 overflow-hidden">
+                <Image 
+                  src="/logo/yayasan-logo.png" 
+                  alt="Yayasan Pendidikan Elfadh Madani Logo" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-sm text-gray-400 italic">
+                {dict.under}
+              </p>
+            </div>
           </div>
           
           <div>

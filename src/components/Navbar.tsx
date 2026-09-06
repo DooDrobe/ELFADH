@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Menu as HeadlessMenu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +21,17 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="font-bold text-2xl text-elfadh-red">EL-FADH</span>
-              <span className="font-semibold text-2xl text-gray-800 ml-2">Bimbel</span>
+          <div className="flex-shrink-0 flex items-center">
+            <Link href={`/${lang}`} className="flex items-center gap-2">
+              <div className="relative w-10 h-10 overflow-hidden rounded-md border border-gray-100">
+                <Image 
+                  src="/logo/elfadh-logo.jpg" 
+                  alt="EL-FADH Bimbel Logo" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <span className="font-bold text-2xl text-elfadh-red tracking-tight hidden sm:block">EL-FADH</span>
             </Link>
           </div>
           
