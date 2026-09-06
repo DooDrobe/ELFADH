@@ -5,9 +5,17 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Menu as HeadlessMenu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
-export default function Navbar() {
+export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const switchLanguage = (newLang: string) => {
+    const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
+    router.push(newPath);
+  };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -21,13 +29,13 @@ export default function Navbar() {
           </div>
           
           <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-elfadh-red px-3 py-2 rounded-md text-sm font-medium">
-              Home
+            <Link href={`/${lang}`} className="text-gray-700 hover:text-elfadh-red px-3 py-2 rounded-md text-sm font-medium">
+              {dict.home}
             </Link>
             
             <HeadlessMenu as="div" className="relative">
               <HeadlessMenu.Button className="flex items-center text-gray-700 hover:text-elfadh-red px-3 py-2 rounded-md text-sm font-medium">
-                Programs
+                {dict.programs}
                 <ChevronDown className="ml-1 w-4 h-4" />
               </HeadlessMenu.Button>
               <Transition
@@ -44,20 +52,20 @@ export default function Navbar() {
                     <HeadlessMenu.Item>
                       {({ active }) => (
                         <Link
-                          href="/programs"
+                          href={`/${lang}/programs`}
                           className={`${active ? "bg-gray-100 text-gray-900" : "text-gray-700"} block px-4 py-2 text-sm`}
                         >
-                          SD / SMP / SMA
+                          {dict.programs_sd_smp_sma}
                         </Link>
                       )}
                     </HeadlessMenu.Item>
                     <HeadlessMenu.Item>
                       {({ active }) => (
                         <Link
-                          href="/programs"
+                          href={`/${lang}/programs`}
                           className={`${active ? "bg-gray-100 text-gray-900" : "text-gray-700"} block px-4 py-2 text-sm`}
                         >
-                          Test Preparation
+                          {dict.programs_test_prep}
                         </Link>
                       )}
                     </HeadlessMenu.Item>
@@ -66,8 +74,8 @@ export default function Navbar() {
               </Transition>
             </HeadlessMenu>
 
-            <Link href="/pricing" className="text-gray-700 hover:text-elfadh-red px-3 py-2 rounded-md text-sm font-medium">
-              Pricing
+            <Link href={`/${lang}/pricing`} className="text-gray-700 hover:text-elfadh-red px-3 py-2 rounded-md text-sm font-medium">
+              {dict.pricing}
             </Link>
             
             <a 
@@ -76,8 +84,23 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="bg-elfadh-red text-white hover:bg-red-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
             >
-              Contact Us
+              {dict.contact}
             </a>
+
+            <div className="flex bg-gray-100 rounded-md p-1 border border-gray-200 ml-4">
+              <button 
+                onClick={() => switchLanguage('id')} 
+                className={`px-2 py-1 text-xs rounded-sm font-bold ${lang === 'id' ? 'bg-white shadow-sm text-elfadh-red' : 'text-gray-500 hover:text-gray-700'}`}
+              >
+                ID
+              </button>
+              <button 
+                onClick={() => switchLanguage('en')} 
+                className={`px-2 py-1 text-xs rounded-sm font-bold ${lang === 'en' ? 'bg-white shadow-sm text-elfadh-red' : 'text-gray-500 hover:text-gray-700'}`}
+              >
+                EN
+              </button>
+            </div>
           </div>
 
           <div className="-mr-2 flex items-center sm:hidden">
@@ -95,14 +118,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="sm:hidden">
           <div className="pt-2 pb-3 space-y-1">
-            <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-elfadh-red hover:bg-gray-50">
-              Home
+            <Link href={`/${lang}`} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-elfadh-red hover:bg-gray-50">
+              {dict.home}
             </Link>
-            <Link href="/programs" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-elfadh-red hover:bg-gray-50">
-              Programs
+            <Link href={`/${lang}/programs`} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-elfadh-red hover:bg-gray-50">
+              {dict.programs}
             </Link>
-            <Link href="/pricing" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-elfadh-red hover:bg-gray-50">
-              Pricing
+            <Link href={`/${lang}/pricing`} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-elfadh-red hover:bg-gray-50">
+              {dict.pricing}
             </Link>
             <a 
               href="https://wa.me/6281378037428" 
@@ -110,8 +133,23 @@ export default function Navbar() {
               rel="noopener noreferrer" 
               className="block px-3 py-2 rounded-md text-base font-medium text-elfadh-red hover:bg-gray-50"
             >
-              Contact Us (WhatsApp)
+              {dict.contact}
             </a>
+            
+            <div className="flex px-3 py-2 space-x-2">
+              <button 
+                onClick={() => switchLanguage('id')} 
+                className={`px-3 py-1 text-sm rounded-md border ${lang === 'id' ? 'bg-elfadh-red text-white border-transparent' : 'bg-white text-gray-700 border-gray-300'}`}
+              >
+                ID
+              </button>
+              <button 
+                onClick={() => switchLanguage('en')} 
+                className={`px-3 py-1 text-sm rounded-md border ${lang === 'en' ? 'bg-elfadh-red text-white border-transparent' : 'bg-white text-gray-700 border-gray-300'}`}
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
       )}

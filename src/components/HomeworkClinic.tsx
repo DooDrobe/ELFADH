@@ -1,22 +1,22 @@
 import { PenTool, CheckCircle, Trophy } from "lucide-react";
 
-export default function HomeworkClinic() {
+export default function HomeworkClinic({ dict }: { dict: any }) {
   const steps = [
     {
-      title: "Bring Your PR",
-      description: "Students bring their English homework from school to our clinic sessions.",
+      title: dict.step1_title,
+      description: dict.step1_desc,
       icon: <PenTool className="w-8 h-8 text-white" />,
       color: "bg-elfadh-red"
     },
     {
-      title: "Learn the Concepts",
-      description: "Our tutors explain the underlying grammar and vocabulary clearly.",
+      title: dict.step2_title,
+      description: dict.step2_desc,
       icon: <CheckCircle className="w-8 h-8 text-white" />,
       color: "bg-madani-blue"
     },
     {
-      title: "Ace the Subject",
-      description: "Students submit perfect homework and gain confidence in class.",
+      title: dict.step3_title,
+      description: dict.step3_desc,
       icon: <Trophy className="w-8 h-8 text-white" />,
       color: "bg-madani-orange"
     }
@@ -27,10 +27,10 @@ export default function HomeworkClinic() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Struggling with School English?
+            {dict.title}
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            Our Homework Clinic is here to help you get better grades and understand English perfectly.
+            {dict.description}
           </p>
         </div>
 

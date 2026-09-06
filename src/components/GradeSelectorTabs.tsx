@@ -3,40 +3,40 @@
 import { useState } from "react";
 import { BookOpen, GraduationCap, School } from "lucide-react";
 
-export default function GradeSelectorTabs() {
+export default function GradeSelectorTabs({ dict }: { dict: any }) {
   const [activeTab, setActiveTab] = useState("SD");
 
   const curriculums = {
     SD: {
-      title: "English for SD (Primary)",
-      description: "Building a strong foundation with fun and interactive learning.",
+      title: dict.sd_title,
+      description: dict.sd_desc,
       features: [
-        "Basic Vocabulary & Grammar",
-        "Fun Interactive Speaking Games",
-        "School PR Assistance",
-        "Confidence Building",
+        dict.sd_f1,
+        dict.sd_f2,
+        dict.sd_f3,
+        dict.sd_f4,
       ],
       icon: <BookOpen className="w-6 h-6" />
     },
     SMP: {
-      title: "English for SMP (Junior High)",
-      description: "Leveling up English skills for academics and daily conversation.",
+      title: dict.smp_title,
+      description: dict.smp_desc,
       features: [
-        "Advanced Grammar & Tenses",
-        "Conversational Practice",
-        "National Exam Preparation",
-        "Reading & Writing Mastery",
+        dict.smp_f1,
+        dict.smp_f2,
+        dict.smp_f3,
+        dict.smp_f4,
       ],
       icon: <School className="w-6 h-6" />
     },
     SMA: {
-      title: "English for SMA (Senior High)",
-      description: "Preparing for university, TOEFL, and global communication.",
+      title: dict.sma_title,
+      description: dict.sma_desc,
       features: [
-        "Academic Reading & Writing",
-        "Debate & Public Speaking",
-        "University Entrance Prep (UTBK)",
-        "TOEFL/TOEIC Introduction",
+        dict.sma_f1,
+        dict.sma_f2,
+        dict.sma_f3,
+        dict.sma_f4,
       ],
       icon: <GraduationCap className="w-6 h-6" />
     },

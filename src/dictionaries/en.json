@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "programs": "Programs",
+    "programs_sd_smp_sma": "SD / SMP / SMA",
+    "programs_test_prep": "Test Preparation",
+    "pricing": "Pricing",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title1": "English Confidence for",
+    "title2": "School & Beyond",
+    "description": "From PR Help to Exam Ready. Join EL-FADH Bimbel and watch your English skills transform with our expert guidance and interactive classes.",
+    "view_programs": "View Programs",
+    "chat_wa": "Chat via WhatsApp"
+  },
+  "clinic": {
+    "title": "Struggling with School English?",
+    "description": "Our Homework Clinic is here to help you get better grades and understand English perfectly.",
+    "step1_title": "Bring Your PR",
+    "step1_desc": "Students bring their English homework from school to our clinic sessions.",
+    "step2_title": "Learn the Concepts",
+    "step2_desc": "Our tutors explain the underlying grammar and vocabulary clearly.",
+    "step3_title": "Ace the Subject",
+    "step3_desc": "Students submit perfect homework and gain confidence in class."
+  },
+  "gallery": {
+    "title": "Life at EL-FADH",
+    "description": "From our Big Try Out to our field trips at Museum Rispa.",
+    "activity": "Activity"
+  },
+  "programs": {
+    "title": "Our Curriculums",
+    "description": "Tailored programs for every age group. Whether you need help with school PR, national exams, or university preparation, we have the right class for you.",
+    "sd_title": "English for SD (Primary)",
+    "sd_desc": "Building a strong foundation with fun and interactive learning.",
+    "sd_f1": "Basic Vocabulary & Grammar",
+    "sd_f2": "Fun Interactive Speaking Games",
+    "sd_f3": "School PR Assistance",
+    "sd_f4": "Confidence Building",
+    "smp_title": "English for SMP (Junior High)",
+    "smp_desc": "Leveling up English skills for academics and daily conversation.",
+    "smp_f1": "Advanced Grammar & Tenses",
+    "smp_f2": "Conversational Practice",
+    "smp_f3": "National Exam Preparation",
+    "smp_f4": "Reading & Writing Mastery",
+    "sma_title": "English for SMA (Senior High)",
+    "sma_desc": "Preparing for university, TOEFL, and global communication.",
+    "sma_f1": "Academic Reading & Writing",
+    "sma_f2": "Debate & Public Speaking",
+    "sma_f3": "University Entrance Prep (UTBK)",
+    "sma_f4": "TOEFL/TOEIC Introduction"
+  },
+  "pricing": {
+    "title": "Course Catalog & Pricing",
+    "description": "Transparent pricing for our high-quality English programs. Find the right fit for your goals.",
+    "duration": "Duration",
+    "meetings": "Meetings",
+    "class_size": "Class Size",
+    "fee": "Fee",
+    "enroll": "Enroll Now via WhatsApp",
+    "enroll_msg": "Hello EL-FADH, I'm interested in the"
+  },
+  "footer": {
+    "tagline": "English Confidence for School & Beyond — From PR Help to Exam Ready.",
+    "under": "Under Yayasan Pendidikan Elfadh Madani",
+    "contact_us": "Contact Us",
+    "location": "Location",
+    "view_map": "View on Google Maps \u2192",
+    "rights": "All rights reserved."
+  }
+}

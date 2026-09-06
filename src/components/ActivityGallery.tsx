@@ -1,13 +1,13 @@
-export default function ActivityGallery() {
+export default function ActivityGallery({ dict }: { dict: any }) {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Life at EL-FADH
+            {dict.title}
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            From our Big Try Out to our field trips at Museum Rispa.
+            {dict.description}
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export default function ActivityGallery() {
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
               </svg>
-              <span className="text-gray-500 font-medium group-hover:text-elfadh-red transition-colors">Activity {item}</span>
+              <span className="text-gray-500 font-medium group-hover:text-elfadh-red transition-colors">{dict.activity} {item}</span>
             </div>
           ))}
         </div>

@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "programs": "Program",
+    "programs_sd_smp_sma": "SD / SMP / SMA",
+    "programs_test_prep": "Persiapan Ujian",
+    "pricing": "Biaya",
+    "contact": "Hubungi Kami"
+  },
+  "hero": {
+    "title1": "Percaya Diri Berbahasa Inggris untuk",
+    "title2": "Sekolah & Masa Depan",
+    "description": "Dari Bantuan PR hingga Persiapan Ujian. Bergabunglah dengan EL-FADH Bimbel dan tingkatkan kemampuan bahasa Inggris Anda dengan bimbingan ahli dan kelas interaktif.",
+    "view_programs": "Lihat Program",
+    "chat_wa": "Chat via WhatsApp"
+  },
+  "clinic": {
+    "title": "Kesulitan dengan Bahasa Inggris di Sekolah?",
+    "description": "Klinik PR kami hadir untuk membantu Anda mendapatkan nilai yang lebih baik dan memahami bahasa Inggris dengan sempurna.",
+    "step1_title": "Bawa PR Anda",
+    "step1_desc": "Siswa membawa PR bahasa Inggris mereka dari sekolah ke sesi klinik kami.",
+    "step2_title": "Pelajari Konsepnya",
+    "step2_desc": "Tutor kami menjelaskan tata bahasa dan kosakata dasar dengan jelas.",
+    "step3_title": "Kuasai Pelajarannya",
+    "step3_desc": "Siswa mengumpulkan PR dengan sempurna dan mendapatkan kepercayaan diri di kelas."
+  },
+  "gallery": {
+    "title": "Aktivitas di EL-FADH",
+    "description": "Dari Big Try Out hingga karyawisata kami di Museum Rispa.",
+    "activity": "Aktivitas"
+  },
+  "programs": {
+    "title": "Kurikulum Kami",
+    "description": "Program yang disesuaikan untuk setiap kelompok umur. Baik Anda butuh bantuan untuk PR sekolah, ujian nasional, atau persiapan masuk universitas, kami memiliki kelas yang tepat untuk Anda.",
+    "sd_title": "Bahasa Inggris untuk SD",
+    "sd_desc": "Membangun fondasi yang kuat dengan pembelajaran yang menyenangkan dan interaktif.",
+    "sd_f1": "Kosakata & Tata Bahasa Dasar",
+    "sd_f2": "Permainan Berbicara Interaktif",
+    "sd_f3": "Bantuan PR Sekolah",
+    "sd_f4": "Membangun Kepercayaan Diri",
+    "smp_title": "Bahasa Inggris untuk SMP",
+    "smp_desc": "Meningkatkan kemampuan bahasa Inggris untuk akademik dan percakapan sehari-hari.",
+    "smp_f1": "Tata Bahasa Lanjutan & Tenses",
+    "smp_f2": "Latihan Percakapan",
+    "smp_f3": "Persiapan Ujian Nasional",
+    "smp_f4": "Penguasaan Membaca & Menulis",
+    "sma_title": "Bahasa Inggris untuk SMA",
+    "sma_desc": "Persiapan masuk universitas, TOEFL, dan komunikasi global.",
+    "sma_f1": "Membaca & Menulis Akademik",
+    "sma_f2": "Debat & Berbicara di Depan Umum",
+    "sma_f3": "Persiapan Masuk Universitas (UTBK)",
+    "sma_f4": "Pengantar TOEFL/TOEIC"
+  },
+  "pricing": {
+    "title": "Katalog Kursus & Biaya",
+    "description": "Harga transparan untuk program bahasa Inggris berkualitas tinggi kami. Temukan kelas yang tepat untuk tujuan Anda.",
+    "duration": "Durasi",
+    "meetings": "Pertemuan",
+    "class_size": "Kapasitas Kelas",
+    "fee": "Biaya",
+    "enroll": "Daftar via WhatsApp",
+    "enroll_msg": "Halo EL-FADH, saya tertarik dengan kelas"
+  },
+  "footer": {
+    "tagline": "Percaya Diri Berbahasa Inggris untuk Sekolah & Masa Depan — Dari Bantuan PR hingga Persiapan Ujian.",
+    "under": "Di bawah naungan Yayasan Pendidikan Elfadh Madani",
+    "contact_us": "Hubungi Kami",
+    "location": "Lokasi",
+    "view_map": "Lihat di Google Maps \u2192",
+    "rights": "Hak Cipta Dilindungi Undang-Undang."
+  }
+}

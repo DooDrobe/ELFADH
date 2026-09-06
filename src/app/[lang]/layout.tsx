@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { getDictionary, Locale } from "@/dictionaries/dictionaries";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -11,19 +13,27 @@ export const metadata: Metadata = {
   description: "Bimbel Bahasa Inggris di Medan. From PR Help to Exam Ready. Join us for TOEFL, TOEIC, IELTS, and more.",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: 'id' }, { lang: 'en' }];
+}
+
+export default async function RootLayout({
   children,
+  params: { lang },
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale };
 }>) {
+  const dict = await getDictionary(lang);
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className={inter.className}>
-        <Navbar />
+        <Navbar dict={dict.nav} lang={lang} />
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
+        <Footer dict={dict.footer} />
       </body>
     </html>
   );
