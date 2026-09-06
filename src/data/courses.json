@@ -1,0 +1,13 @@
+[
+  { "id": 1, "name": "TOEFL ITP", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 2, "name": "TOEFL", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 3, "name": "TOEIC", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 4, "name": "IELTS", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 5, "name": "Business English", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 6, "name": "Conversation Class", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 7, "name": "Grammar Class", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 8, "name": "General English", "meetings": "24x", "duration": "3 Months", "participants": "10 Person", "fee": "Rp. 1.400.000 / Package" },
+  { "id": 9, "name": "Private Class", "meetings": "24x-26x", "duration": "3 Months", "participants": "10-12 Person", "fee": "Rp. 1.400.000 / Meeting" },
+  { "id": 10, "name": "TOEFL / TOEIC Test", "meetings": "-", "duration": "-", "participants": "1 Person", "fee": "Rp. 1.400.000 / Test" },
+  { "id": 11, "name": "TOEFL ITP Test", "meetings": "-", "duration": "-", "participants": "10 Person", "fee": "Rp. 1.400.000 / Test" }
+]
