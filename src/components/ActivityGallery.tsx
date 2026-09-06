@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ActivityGallery({ dict }: { dict: any }) {
   return (
     <section className="py-16 bg-white">
@@ -12,16 +14,43 @@ export default function ActivityGallery({ dict }: { dict: any }) {
         </div>
 
         {/* Thematic SVGs representing activities before final photos are swapped in */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="bg-gray-50 aspect-[4/3] rounded-lg flex flex-col items-center justify-center overflow-hidden border border-gray-100 group transition-transform hover:scale-105">
-              <svg className="w-24 h-24 mb-4 text-madani-blue opacity-50 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-              <span className="text-gray-500 font-medium group-hover:text-elfadh-red transition-colors">{dict.activity} {item}</span>
+        <div className="flex overflow-x-auto whitespace-nowrap gap-6 pb-8 snap-x snap-mandatory no-scrollbar">
+          {/* Item 1 */}
+          <div className="relative flex-none w-full sm:w-[400px] h-72 snap-center rounded-2xl overflow-hidden shadow-lg group">
+            {/* Fallback gradient if image not found */}
+            <div className="absolute inset-0 bg-gradient-to-br from-madani-blue to-elfadh-red opacity-80" />
+            <Image 
+              src="/gallery/try-out.jpg" 
+              alt="Big Try Out" 
+              fill
+              className="object-cover mix-blend-overlay group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
+            <div className="absolute bottom-0 left-0 p-6">
+              <p className="text-white font-bold text-xl drop-shadow-md">Big Try Out</p>
             </div>
+          </div>
+
+          {/* Item 2 */}
+          <div className="relative flex-none w-full sm:w-[400px] h-72 snap-center rounded-2xl overflow-hidden shadow-lg group">
+            <div className="absolute inset-0 bg-gradient-to-br from-madani-orange to-red-500 opacity-80" />
+            <Image 
+              src="/gallery/museum.jpg" 
+              alt="Museum Rispa" 
+              fill
+              className="object-cover mix-blend-overlay group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
+            <div className="absolute bottom-0 left-0 p-6">
+              <p className="text-white font-bold text-xl drop-shadow-md">Museum Rispa Field Trip</p>
+            </div>
+          </div>
+          
+          {/* Add more items following the same structure when you have more photos in /public/gallery/ */}
+          {[3, 4, 5].map((item) => (
+             <div key={item} className="relative flex-none w-full sm:w-[400px] h-72 snap-center rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300">
+               <span className="text-gray-400 font-medium">{dict.activity} {item}</span>
+             </div>
           ))}
         </div>
       </div>
