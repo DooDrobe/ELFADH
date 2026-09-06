@@ -11,13 +11,16 @@ export default function ActivityGallery() {
           </p>
         </div>
 
-        {/* Placeholder for the gallery since we don't have the FOTO folder yet */}
+        {/* Thematic SVGs representing activities before final photos are swapped in */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="bg-gray-200 aspect-[4/3] rounded-lg flex items-center justify-center overflow-hidden relative group">
-              <span className="text-gray-400 font-medium">Authentic Photo {item}</span>
-              {/* This will be replaced with next/image once FOTO folder is available */}
-              {/* <Image src={`/FOTO/photo-${item}.jpg`} fill className="object-cover" alt="EL-FADH Activity" /> */}
+            <div key={item} className="bg-gray-50 aspect-[4/3] rounded-lg flex flex-col items-center justify-center overflow-hidden border border-gray-100 group transition-transform hover:scale-105">
+              <svg className="w-24 h-24 mb-4 text-madani-blue opacity-50 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span className="text-gray-500 font-medium group-hover:text-elfadh-red transition-colors">Activity {item}</span>
             </div>
           ))}
         </div>

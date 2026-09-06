@@ -42,11 +42,15 @@ export default function Home() {
             </main>
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-100 flex items-center justify-center">
-          {/* Hero placeholder until FOTO is available */}
-          <div className="text-gray-400 font-medium">
-            [Hero Image Placeholder]
-          </div>
+        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-50 flex items-center justify-center p-8">
+          <svg className="w-full h-auto max-w-md" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="500" height="500" rx="250" fill="#E6F6FD" />
+            <path d="M150 350 L350 350 L300 150 L200 150 Z" fill="#00A3E0" />
+            <circle cx="250" cy="110" r="40" fill="#FF8C00" />
+            <rect x="180" y="220" width="140" height="80" rx="10" fill="white" />
+            <path d="M190 240 L310 240 M190 260 L280 260 M190 280 L300 280" stroke="#E50914" strokeWidth="4" strokeLinecap="round" />
+            <path d="M120 350 L380 350" stroke="#E50914" strokeWidth="8" strokeLinecap="round" />
+          </svg>
         </div>
       </section>
 
